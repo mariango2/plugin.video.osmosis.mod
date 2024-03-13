@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
 	<category label="30000">
-		<setting label="30001" type="folder" id="STRM_LOC" source="auto" option="writeable" default="special://profile/addon_data/plugin.video.osmosis/strms"/>   
-		<setting label="30002" type="folder" id="MediaList_LOC" source="auto" option="writeable" default="special://profile/addon_data/plugin.video.osmosis"/>
+		<setting label="30001" type="folder" id="STRM_LOC" source="auto" option="writeable" default="special://profile/addon_data/plugin.video.osmosis.mod/strms"/>   
+		<setting label="30002" type="folder" id="MediaList_LOC" source="auto" option="writeable" default="special://profile/addon_data/plugin.video.osmosis.mod"/>
 		<setting label="30003" type="enum" id="Link_Type" values="OSMOSIS|Original Plugin" default="0"/>
  		<!-- 
  		<setting label="30004" type="bool" id="Update_Strms" default="true"/>
@@ -67,7 +67,7 @@
 		<setting label="32303" type="text" id="Movies-DB name" visible="eq(-19,true)"/>
 		<setting label="32304" type="ipaddress" id="Movies-DB IP" default="localhost" visible="eq(-20,true)"/>
 		<setting label="32305" type="number" id="Movies-DB port" default="3306" visible="eq(-21,true)"/>
-		<setting label="32306" type="folder" id="Movies-DB path" source="auto" option="writeable" default="special://profile/addon_data/plugin.video.osmosis" visible="eq(-22,false)"/>
+		<setting label="32306" type="folder" id="Movies-DB path" source="auto" option="writeable" default="special://profile/addon_data/plugin.video.osmosis.mod" visible="eq(-22,false)"/>
 
 		<setting label="32400" type="lsep"/>
 		<setting label="32401" type="text" id="TV-Show-DB username" visible="eq(-24,true)"/>
@@ -75,7 +75,7 @@
 		<setting label="32403" type="text" id="TV-Show-DB name" visible="eq(-26,true)"/>
 		<setting label="32404" type="ipaddress" id="TV-Show-DB IP" default="localhost" visible="eq(-27,true)"/>
 		<setting label="32405" type="number" id="TV-Show-DB port" default="3306" visible="eq(-28,true)"/>
-		<setting label="32406" type="folder" id="TV-Show-DB path" source="auto" option="writeable" default="special://profile/addon_data/plugin.video.osmosis" visible="eq(-29,false)"/>
+		<setting label="32406" type="folder" id="TV-Show-DB path" source="auto" option="writeable" default="special://profile/addon_data/plugin.video.osmosis.mod" visible="eq(-29,false)"/>
 
 		<setting label="32500" type="lsep"/>
 		<setting label="32501" type="text" id="Music-DB username" visible="eq(-31,true)"/>
@@ -83,14 +83,14 @@
 		<setting label="32503" type="text" id="Music-DB name" visible="eq(-33,true)"/>
 		<setting label="32504" type="ipaddress" id="Music-DB IP" default="localhost" visible="eq(-34,true)"/>
 		<setting label="32505" type="number" id="Music-DB port" default="3306" visible="eq(-35,true)"/>
-		<setting label="32506" type="folder" id="Music-DB path" source="auto" option="writeable" default="special://profile/addon_data/plugin.video.osmosis" visible="eq(-36,false)"/>
+		<setting label="32506" type="folder" id="Music-DB path" source="auto" option="writeable" default="special://profile/addon_data/plugin.video.osmosis.mod" visible="eq(-36,false)"/>
 	</category>
 	<category label="33000">
 		<setting label="33001" type="enum" id="playback_dialog" lvalues='33002|33003' default="0"/>
 		<setting label="33004" type="slider" id="playback_rewind" default="5" range="0,10" option="int"/>
-		<setting label="33005" type="action" id="playback_ignore_addon" action="RunPlugin(plugin://plugin.video.osmosis/?mode=103)" option="close"/>
+		<setting label="33005" type="action" id="playback_ignore_addon" action="RunPlugin(plugin://plugin.video.osmosis.mod/?mode=103)" option="close"/>
 		<setting type="text" id="playback_ignore_addon_string" visible="false"/>
-		<setting label="33006" type="action" id="infolabels_add_addon" action="RunPlugin(plugin://plugin.video.osmosis/?mode=104)" option="close"/>
+		<setting label="33006" type="action" id="infolabels_add_addon" action="RunPlugin(plugin://plugin.video.osmosis.mod/?mode=104)" option="close"/>
 		<setting type="text" id="infolabels_add_addon_string" visible="false"/>
 	</category>
 </settings>

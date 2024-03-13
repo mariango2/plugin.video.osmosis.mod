@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: OSMOSIS
-# Addon id: plugin.video.osmosis
+# Addon id: plugin.video.osmosis.mod
 # Addon Provider: Stereodruid, Maven85, gismo112
 
 msgid ""

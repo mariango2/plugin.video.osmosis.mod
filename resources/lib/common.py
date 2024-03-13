@@ -213,7 +213,7 @@ def exit():
         from .utils import addon_log
         addon_log('Abort requested - exiting addon')
     except:
-        xbmc.log('[plugin.video.osmosis] Abort requested - exiting addon')
+        xbmc.log('[plugin.video.osmosis.mod] Abort requested - exiting addon')
     import sys
 
     sys.exit()
