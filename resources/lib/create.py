@@ -679,7 +679,9 @@ def getEpisode(episode_item, strm_name, strm_type, j=0, pagesDone=0, name_orig=N
             strSeasonEpisode = 's{0}e{1}'.format(season, '-'.join(map(str, episode)))
         else:
             strSeasonEpisode = 's{0}e{1}'.format(season, episode)
-    showtitle = episode_item.get('showtitle', None)
+    showtitle = getStrmname(strm_name)
+    if showtitle is None or showtitle == '':
+        showtitle = episode_item.get('showtitle', None)
 
     if showtitle is not None and showtitle != '' and strm_type != '':
         path = os.path.join(strm_type, cleanStrmFilesys(showtitle))
