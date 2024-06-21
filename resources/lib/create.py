@@ -67,7 +67,7 @@ def fillPluginItems(url, media_type='video', file_type=False, strm=False, strm_n
             details = requestList(plugin_url, media_type).get('files', [])
             retry_count = retry_count + 1
 
-        if globals.monitor.abortRequested():
+        if globals.monitor.abortRequested() or retry_count > 3:
             exit()
     else:
         details = [dict(playableSingleMedia=True, url=plugin_url, name=name_orig)]
