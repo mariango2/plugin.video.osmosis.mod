@@ -672,16 +672,13 @@ def getEpisode(episode_item, strm_name, strm_type, j=0, pagesDone=0, name_orig=N
     split_episode = episode_item.get('split_episode', -1)
     multi_episode = episode_item.get('multi_episode', False)
     season = episode_item.get('season', -1)
-    if split_episode > 0:
-        strSeasonEpisode = 's{0}e{1}.{2}'.format(season, episode, split_episode)
-    else:
-        if multi_episode:
-            strSeasonEpisode = 's{0}e{1}'.format(season, '-'.join(map(str, episode)))
-        else:
-            strSeasonEpisode = 's{0}e{1}'.format(season, episode)
     showtitle = getStrmname(strm_name)
     if showtitle is None or showtitle == '':
         showtitle = episode_item.get('showtitle', None)
+    if split_episode > 0:
+        strSeasonEpisode = f'{showtitle} S{season:02d}E{episode:02d} pt {split_episode}'
+    else:
+        strSeasonEpisode = f'{showtitle} S{season:02d}E{episode:02d}'
 
     if showtitle is not None and showtitle != '' and strm_type != '':
         path = os.path.join(strm_type, cleanStrmFilesys(showtitle))
